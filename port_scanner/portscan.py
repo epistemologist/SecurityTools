@@ -40,6 +40,8 @@ if __name__ == "__main__":
     print(colorama.Fore.LIGHTMAGENTA_EX + "[x] Scanning ports..." + colorama.Style.RESET_ALL)
     open_ports = get_open_ports(args.ip, args.t, is_verbose = args.verbose)
     if args.nmap:
-        print(colorama.Fore.LIGHTMAGENTA_EX + "[x] Running nmap command")
-        subprocess.call(f"nmap -sC -sV -oA nmap_output -p {''.join([str(i) for i in open_ports])}",shell=True)
+        print(colorama.Fore.LIGHTMAGENTA_EX + "[x] Running nmap command" + colorama.Style.RESET_ALL)
+        command = f"nmap -sC -sV -oA nmap_output -p {','.join([str(i) for i in open_ports])} {args.ip}"
+        print("Command: ", command)
+        subprocess.call(command,shell=True)
 
