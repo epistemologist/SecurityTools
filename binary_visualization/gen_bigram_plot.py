@@ -11,6 +11,7 @@ def plot_bytes(filename):
         bigrams[data[i]][data[i+1]] += 1
     print(np.max(bigrams), bigrams)
     plt.imshow(bigrams, cmap = "gnuplot2", vmin = 0, vmax = np.max(bigrams))
+    plt.show()
     plt.savefig(filename)
 
 if __name__ == "__main__":

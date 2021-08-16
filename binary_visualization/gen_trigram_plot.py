@@ -48,8 +48,9 @@ def plot_bytes(filename, num_points):
     trigrams_ranks = get_ranks(trigrams)
     elems, counts = np.unique(trigrams, return_counts = True)
     # Get max n trigrams (as given by parameter)
-    max_count = np.sort(trigrams)[-num_points]
+    max_count = max(1, np.sort(trigrams)[-num_points])
     top_trigram_indices = np.where(trigrams >= max_count)[0]
+    print(max_count)
     print(top_trigram_indices.shape)
     # Set up plot
     rcParams["figure.facecolor"] = "black"
