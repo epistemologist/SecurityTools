@@ -19,4 +19,5 @@ The script `gen_bigram_plot.py` generates a plot of the most common byte bigrams
 ## Trigrams
 The script `gen_trigram_plot.py` generates a plot of the most common byte trigrams in the given data provided to stdin. Note that due to the added dimension, this takes *a lot* longer than the 2D plots, but gives a lot more resolution.
 
-
+#### ASCII Text
+![3D ASCII plot](/binary_visualization/plots/3d_ascii.mp4)
