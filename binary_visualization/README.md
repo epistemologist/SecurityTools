@@ -12,6 +12,11 @@ The script `gen_bigram_plot.py` generates a plot of the most common byte bigrams
 ### Example Plots
 
 #### ASCII Text
-![2D ASCII plot](/plots/2d_ascii.png)
+![2D ASCII plot](/binary_visualization/plots/2d_ascii.png)
 #### Compressed Data
-![2D Compressed plot](/plots/2d_compressed.png)
+![2D Compressed plot](/binary_visualization/plots/2d_compressed.png)
+
+## Trigrams
+The script `gen_trigram_plot.py` generates a plot of the most common byte trigrams in the given data provided to stdin. Note that due to the added dimension, this takes *a lot* longer than the 2D plots, but gives a lot more resolution.
+
+
